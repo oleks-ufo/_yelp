@@ -79,14 +79,13 @@ class Schedule(Base):
     __tablename__ = 'schedule'
 
     id = Column(Integer, primary_key=True)
-
-    mon = Column('mon', String(20))
-    tue = Column('tue', String(20))
-    wed = Column('wed', String(20))
-    thu = Column('thu', String(20))
-    fri = Column('fri', String(20))
-    sat = Column('sat', String(20))
-    sun = Column('sun', String(20))
+    mon = Column('mon', String(50))
+    tue = Column('tue', String(50))
+    wed = Column('wed', String(50))
+    thu = Column('thu', String(50))
+    fri = Column('fri', String(50))
+    sat = Column('sat', String(50))
+    sun = Column('sun', String(50))
 
     business_id = Column(Integer, ForeignKey('business.id'))
     businesses_link = relationship('Business', back_populates='schedule_link')

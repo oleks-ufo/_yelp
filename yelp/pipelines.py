@@ -29,30 +29,30 @@ class YelpPipeline(object):
                 business.categorys_link.append(current_cat)
 
         schedule = Schedule(
-            mon=item['schedule_d']['mon'],
-            tue=item['schedule_d']['tue'],
-            wed=item['schedule_d']['wed'],
-            thu=item['schedule_d']['thu'],
-            fri=item['schedule_d']['fri'],
-            sat=item['schedule_d']['sat'],
-            sun=item['schedule_d']['sun']
+            mon=item['schedule_d'].get('mon'),
+            tue=item['schedule_d'].get('tue'),
+            wed=item['schedule_d'].get('wed'),
+            thu=item['schedule_d'].get('thu'),
+            fri=item['schedule_d'].get('fri'),
+            sat=item['schedule_d'].get('sat'),
+            sun=item['schedule_d'].get('sun')
         )
 
         business.schedule_link.append(schedule)
-        business.name = item['name']
-        business.url = item['url']
-        business._id = item['biz_id']
-        business.image = item['image']
-        business.phone = item['phone']
+        business.name = item.get('name')
+        business.url = item.get('url')
+        business._id = item.get('biz_id')
+        business.image = item.get('image')
+        business.phone = item.get('phone')
         business.email = None
-        business.street = item['geo_street']
-        business.city = item['geo_city']
-        business.state = item['geo_state']
-        business.country = item['geo_country']
-        business.post_code = item['geo_post_code']
-        business.rating = item['rating']
-        business.reviews_count = item['reviews_count']
-        business.link = item['link']
+        business.street = item.get('geo_street')
+        business.city = item.get('geo_city')
+        business.state = item.get('geo_state')
+        business.country = item.get('geo_country')
+        business.post_code = item.get('geo_post_code')
+        business.rating = item.get('rating')
+        business.reviews_count = item.get('reviews_count')
+        business.link = item.get('link')
         business.about = item.get('about')
 
         try:

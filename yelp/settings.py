@@ -93,11 +93,11 @@ ITEM_PIPELINES = {
 # MySQL
 CONNECTION_STRING = "{drivername}://{user}:{passwd}@{host}:{port}/{db_name}?charset=utf8".format(
      drivername="mysql+pymysql",
-     user="root",
+     user="bwt",
      passwd="",
      host="localhost",
      port="3306",
-     db_name="mysql_yelp",
+     db_name="yelp",
 )
 
 
