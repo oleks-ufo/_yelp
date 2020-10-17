@@ -5,9 +5,6 @@ from yelp.items import YelpItem
 
 # scrapy crawl yelp -a url=https://www.yelp.com/biz/fog-harbor-fish-house-san-francisco-2
 
-# scrapy crawl yelp -a url=https://www.yelp.nl/biz/de-foodhallen-amsterdam
-# scrapy crawl yelp -a url=https://www.yelp.nl/biz/van-dijk-and-ko-amsterdam
-# scrapy crawl yelp -a url=https://www.yelp.nl/biz/autoradam-amsterdam-nieuwpoortkade-amsterdam
 
 class YelpSpider(scrapy.Spider):
     name = 'yelp'
